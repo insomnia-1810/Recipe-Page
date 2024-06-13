@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------ COLOR ------ */
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --DarkRaspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --RoseWhite: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --LightGrey: hsl(30, 18%, 87%);
+  --WengeBrown: hsl(30, 10%, 34%);
+  --DarkCharcoal: hsl(24, 5%, 18%);
+}
+/* ------ COLOR ------ */
+
+/* ------ GLOBAL START ------ */
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--Eggshell);
+  font-size: 16px;
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+}
+
+.container {
+  max-width: 700px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 50px 0;
+}
+
+section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+h1 {
+  color: var(--DarkCharcoal);
+  font-family: 'Young Serif', serif;
+  font-weight: 500;
+}
+
+h2 {
+  color: var(--Nutmeg);
+  font-family: 'Young Serif', serif;
+  font-weight: 400;
+}
+
+h3 {
+  color: var(--DarkRaspberry);
+}
+
+p,
+li {
+  color: var(--WengeBrown);
+  margin-top: 10px;
+}
+
+ul {
+  color: var(--DarkRaspberry);
+}
+
+ul,
+ol {
+  margin-left: 18px;
+}
+
+li::marker {
+  color: var(--Nutmeg);
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 20px;
+  color: var(--LightGrey);
+  opacity: 0.5;
+}
+/* ------ GLOBAL END ------ */
+
+.prep-list {
+  padding: 30px;
+  background-color: var(--RoseWhite);
+  border-radius: 10px;
+}
+
+.prep-list li::marker {
+  color: var(--DarkRaspberry);
+}
+
+table tr td {
+  border-bottom: 1px solid rgb(214, 214, 214);
+  padding: 10px 20px;
+}
+
+table tr td:nth-child(1) {
+  color: var(--WengeBrown);
+}
+
+table tr td:nth-child(2) {
+  color: var(--Nutmeg);
+  font-weight: bold;
+}
+
+table tr:last-child td {
+  border: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  img {
+    border-radius: 0;
+  }
+
+  section {
+    margin: 20px;
+  }
+}
