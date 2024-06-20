@@ -30,112 +30,120 @@ body {
   font-size: 16px;
   font-family: 'Outfit', sans-serif;
   font-optical-sizing: auto;
+  color: var(--WengeBrown);
 }
 
 .container {
-  max-width: 700px;
+  max-width: 600px;
   padding: 30px;
   background-color: white;
   border-radius: 10px;
-  margin: 50px 0;
-}
-
-section {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin: 50px 20px;
 }
 
 img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-}
-
-h1 {
-  color: var(--DarkCharcoal);
-  font-family: 'Young Serif', serif;
-  font-weight: 500;
-}
-
-h2 {
-  color: var(--Nutmeg);
-  font-family: 'Young Serif', serif;
-  font-weight: 400;
-}
-
-h3 {
-  color: var(--DarkRaspberry);
-}
-
-p,
-li {
-  color: var(--WengeBrown);
-  margin-top: 10px;
-}
-
-ul {
-  color: var(--DarkRaspberry);
+  margin-bottom: 30px;
 }
 
 ul,
 ol {
-  margin-left: 18px;
+  margin-left: 20px;
 }
 
-li::marker {
-  color: var(--Nutmeg);
-  font-weight: bold;
+li {
+  margin-top: 5px;
+  padding-left: 10px;
 }
 
 hr {
-  margin-top: 20px;
-  color: var(--LightGrey);
-  opacity: 0.5;
+  margin-bottom: 20px;
 }
-/* ------ GLOBAL END ------ */
+
+section {
+  /* border: 1px solid red; */
+  margin-bottom: 25px;
+}
+
+section:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+section h1 {
+  font-family: 'Young Serif', serif;
+  color: var(--DarkCharcoal);
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+section h2 {
+  font-family: 'Young Serif', serif;
+  color: var(--Nutmeg);
+  font-weight: 300;
+  margin-bottom: 10px;
+}
 
 .prep-list {
-  padding: 30px;
   background-color: var(--RoseWhite);
+  padding: 20px;
   border-radius: 10px;
 }
 
-.prep-list li::marker {
+.prep-list h3 {
+  color: var(--DarkRaspberry);
+  margin-bottom: 10px;
+}
+
+.prep-list ul li::marker {
   color: var(--DarkRaspberry);
 }
 
-table tr td {
-  border-bottom: 1px solid rgb(214, 214, 214);
+.ingredients ul li::marker {
+  color: var(--Nutmeg);
+}
+
+.instructions ol li::marker {
+  color: var(--Nutmeg);
+  font-weight: 700;
+}
+
+.nutrition table {
+  width: 100%;
+}
+
+.nutrition table tr td {
+  border-bottom: 1px solid gainsboro;
   padding: 10px 20px;
 }
 
-table tr td:nth-child(1) {
-  color: var(--WengeBrown);
-}
-
-table tr td:nth-child(2) {
+.nutrition table tr td:nth-child(2) {
   color: var(--Nutmeg);
-  font-weight: bold;
+  font-weight: 700;
 }
 
-table tr:last-child td {
+.nutrition table tr:nth-last-child(1) td {
   border: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 375px) {
   .container {
     margin: 0;
-    border-radius: 0;
     padding: 0;
   }
 
   img {
     border-radius: 0;
+    margin: 0;
   }
 
   section {
-    margin: 20px;
+    margin: 30px 20px !important;
+  }
+
+  hr {
+    margin: 0;
   }
 }
